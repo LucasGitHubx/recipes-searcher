@@ -11,6 +11,10 @@ export default function Recipe() {
   const callAPI = useAPIbyID();
 
   useEffect(() => {
+    console.log(singleRecipe);
+  }, [singleRecipe]);
+
+  useEffect(() => {
     if (loaded) {
       const instructions = singleRecipe.strInstructions.split("\n");
       const instructionsFiltered = instructions.filter(
@@ -50,7 +54,7 @@ export default function Recipe() {
             </ol>
           </div>
 
-          <Link to="/">Home</Link>
+          <Link to="/recipes-searcher">Home</Link>
         </div>
       )}
     </>

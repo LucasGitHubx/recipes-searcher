@@ -10,7 +10,7 @@ export default function Recipe({ recipe }) {
           {recipe.strArea} {recipe.strCategory}
         </i>
       </div>
-      <Link to={`/${recipe.idMeal}`}>See more &#8594;</Link>
+      <Link to={`${recipe.idMeal}`}>See more &#8594;</Link>
     </div>
   );
 }
